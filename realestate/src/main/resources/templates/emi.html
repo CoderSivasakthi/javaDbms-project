@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan EMI Calculator</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .Loan_calculator {
+            width: 400px;
+            height: 550px;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 20px 0px 0px 100px;
+            border-radius: 10px;
+            color: white;
+            margin-top: 50px;
+        }
+        p {
+            color: white;
+            font-size: 25px;
+            font-family: sans-serif;
+        }
+        h1 {
+            color: white;
+        }
+        input {
+            height: 33px;
+            width: 70%;
+            font-size: 20px;
+            color: white;
+            padding: 7px;
+            background-color: blue;
+            border: none;
+            border-bottom: 2px solid white;
+            outline: none;
+        }
+        #calculate_op {
+            color: white;
+            font-size: 20px;
+            width: 100px;
+            align-content: center;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        .nav{
+  background: #000;
+  border-bottom: 2px solid yellow;
+  width: 100%;
+  height: 40px;
+  color: white;
+  font-family: poppins;
+  display: flex;
+  padding: 20px;
+  margin-top: -10px;
+  
+}
+.nav h2{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.nav h3{
+  margin-left: 300px;
+  margin-top: 8px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>RealE$tate Listing Management</h2>
+        <h3>Buying Emi loans</h3>
+      </div>
+<div class="main">
+    <div class="Loan_calculator">
+        <h1>Loan EMI Calculator</h1>
+        <p>Loan amount: $<input type="number" id="amount" placeholder="Enter amount.."></p>
+        <p>Rate (Interest): %<input step=".1" id="rate" placeholder="Enter rate.."></p>
+        <p>Months (Time): <input type="number" id="time" placeholder="Enter time.."></p>
+        <input type="button" value="Calculate" id="calculate_op" onclick="calculate()">
+        <p>Total EMI: $<span style="font-weight: 20px; color: white;" id="output"></span></p>
+    </div>
+</div>
+
+    <script>
+        function calculate() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const rate = parseFloat(document.getElementById('rate').value);
+            const time = parseFloat(document.getElementById('time').value);
+
+            const interest = (amount * (rate * 0.01)) / time;
+            let emi = ((amount / time) + interest).toFixed(2);
+            emi = emi.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById("output").innerHTML = emi;
+        }
+    </script>
+</body>
+</html>

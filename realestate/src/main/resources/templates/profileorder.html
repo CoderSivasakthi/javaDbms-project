@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & orders page</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .nav{
+  background: #000;
+  border-bottom: 2px solid yellow;
+  width: 100%;
+  height: 40px;
+  color: white;
+  font-family: poppins;
+  display: flex;
+  padding: 20px;
+}
+.nav h3{
+  margin-left: 300px;
+}
+.profile{
+    background-color: blue;
+    width: 95%;
+    height: max-content;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+}
+.prodata{
+    border-bottom: 2px solid white;
+    padding: 10px;
+}
+.prodata h2{
+    padding: 20px;
+}
+.prodata ul{
+    padding:0px 30px;
+}
+.prodata ul li{
+    padding: 10px;
+    border-bottom: 2px solid white;
+}
+.data2{
+    padding: 20px;
+}
+.order{
+    width: 95%;
+    height: 150px;
+    border: 2px solid white;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+.table{
+    border: 2px solid white;
+    padding: 5px;
+}
+    </style>
+</head>
+<body>
+<div class="nav">
+    <h2>RealE$tate Listing Management</h2>
+    <h3>Profile & cart/orders</h3>
+</div>
+<section class="profile">
+    <div class="prodata">
+        <h2>Your Profile</h2>
+        <ul type="none">
+            <li>Name : Siva</li>
+            <li>Email : 717822F254@kce.ac.in</li>
+            <li>phone no : 123456789</li>
+            <li>username : siva</li>
+            <li>password : siva123</li>
+        </ul>
+    </div>
+    <div class="data2">
+        <div class="cart">
+            <h2>Carts datas</h2>
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>property</th>
+                        <th>propertytype</th>
+                        <th>owner</th>
+                        <th>flatsize</th>
+                        <th>amount</th>
+                    </tr>
+                    </thead>
+
+                    <tr th:each="username : ${cartdata}">
+                        <td th:text=" ${username.name}"></td>
+                        <td th:text=" ${username.property}"></td>
+                        <td th:text=" ${username.propertytype}"></td>
+                        <td th:text=" ${username.owner}"></td>
+                        <td th:text=" ${username.flatsize}"></td>
+                        <td th:text=" ${username.amount}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="order">
+            <h2>Order datas</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>name</th>
+                    <th>property</th>
+                    <th>propertytype</th>
+                    <th>owner</th>
+                    <th>flatsize</th>
+                    <th>amount</th>
+                </tr>
+                </thead>
+
+                <tr th:each="order : ${orderdata}">
+                    <td th:text=" ${order.name}"></td>
+                    <td th:text=" ${order.property}"></td>
+                    <td th:text=" ${order.propertytype}"></td>
+                    <td th:text=" ${order.owner}"></td>
+                    <td th:text=" ${order.flatsize}"></td>
+                    <td th:text=" ${order.amount}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+</body>
+</html>

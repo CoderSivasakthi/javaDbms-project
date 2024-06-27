@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Data page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Arial, sans-serif; margin: 0;}
+
+        .container {
+          display: flex;
+          flex-direction: row;
+          height: max-content;
+        }
+
+        .left-side {
+          flex: 1;
+          background-color: #f1f1f1;
+          padding: 20px;
+        }
+
+        .right-side {
+          flex: 1;
+          padding: 20px;
+        }
+        .slideshow-container {
+          max-width: 100%;
+          position: relative;
+        }
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+        }
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+        .image{
+            width: 100%;
+            height: 550px;
+
+        }
+        .btns{
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        .btns button{
+            padding: 15px;
+            margin-left: 30px;
+            margin-right: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+        .btn1{
+            padding: 20px;
+            background-color: yellow;
+        }
+        .btn2{
+            padding: 20px;
+            background-color: orange;
+        }
+        .btn1:hover{
+            border: 2px solid orange;
+
+        }
+        .btn2:hover{
+            border: 2px solid yellow;
+
+        }
+        .nav{
+          background: #000;
+          border-bottom: 2px solid yellow;
+          width: 100%;
+          height: 80px;
+          color: white;
+          font-family: poppins;
+          display: flex;
+          padding: 10px;
+        }
+        .nav h3{
+          margin-left: 300px;
+        }
+        .amount{
+            background-color: orangered;
+            width: 200px;
+            text-align: center;
+            height: 50px;
+            font-size: 18px;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-size: 100% 200%;
+            transition: 0.5s;
+        }
+        .amount1{
+            background-color: orangered;
+            width: 200px;
+            text-align: center;
+            height: 50px;
+            font-size: 18px;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-size: 100% 200%;
+            transition: 0.5s;
+        }
+        .amount1 p{
+            padding: 15px;
+            color: white;
+            font-weight: 600;
+        }
+        .amount p{
+            padding: 15px;
+            color: white;
+            font-weight: 600;
+        }
+        .amount:hover{
+            background-color: #7c9ee8;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <h2>RealE$tate Listing Management</h2>
+    <h3>Propertys</h3>
+</div>
+<div class="container">
+    <div class="left-side">
+        <div class="slideshow-container">
+
+            <section class="data">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img class="image" src="img r1 - copy.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img class="image" src="himg1.jpeg">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img class="image" src="himg1.1.jpg" >
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img class="image" src="himg1.12.webp">
+                </div>
+                <form action="/customer" method="post">
+                    <div class="btns">
+                        <button name="button" value="addtocart" class="btn1">Add to cart</button>
+                        <button name="button" value="order" class="btn2">Order / Buy</button>
+                    </div>
+                </form>
+
+            </section>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+
+    </div>
+
+    <div class="right-side">
+        <h2>Property 1</h2>
+        <p>3BHK house</p>
+        <ul>
+            <li>Owner Details</li>
+            <li>Name : siva</li>
+            <li>email: 00001@gmail.com</li>
+            <li>Ph no: 123456789</li>
+        </ul>
+        <p>Flat no : 223</p>
+        <p>Flat size: 1500 sq.feet</p>
+        <h3>Address</h3>
+        <li type="none">karpagam colony</li>
+        <li type="none">coimbatore - 6380000</li>
+        <li type="none"></li>
+        <div class="amount1">
+            <p>Amount : 600000</p>
+        </div>
+        <a href="emiloan"><div class="amount">
+            <p>Click to Try Emi</p></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>

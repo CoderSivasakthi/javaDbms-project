@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Form Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .form{
+            width: 600px;
+            /* height: max-content; */
+            border: 2px solid blue;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: blue;
+            color: white;
+            font-size: 18px;
+            font-family: poppins;
+        }
+        .values{
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+        .form .input{
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            background-color: blue;
+            color: white;
+            width: 400px;
+            font-size: 18px;
+        }
+        .submit{
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .submit button{
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: blue;
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+        }
+        .values p{
+            margin-bottom: 10px;
+        }
+        .head{
+            font-size: 30px;
+            font-weight: 1000;
+            margin: auto;
+            text-align: center;
+            font-family: poppins;
+        }
+        .header{
+            font-size: 12px;
+            font-weight: 200;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .nav{
+        background: #000;
+        border-bottom: 2px solid yellow;
+        width: 100%;
+        height: 40px;
+        color: white;
+        font-family: poppins;
+        display: flex;
+        padding: 20px;
+        }
+.nav h3{
+  margin-left: 300px;
+}
+    </style>
+</head>
+<body>
+<div class="nav">
+    <h2>RealE$tate Listing Management</h2>
+    <h3>Property Posting</h3>
+</div>
+<div >
+    <p class="head">For property details</p>
+    <p class="header">your data will not share until you complete the process</p>
+</div>
+<section class="form">
+    <form action="/property" method="post">
+        <div class="values">
+            <p>Name</p>
+            <input type="text" class="input" id="name" name="name">
+        </div>
+        <div class="values">
+            <p>email</p>
+            <input type="text" class="input" id="email" name="email">
+        </div>
+        <div class="values">
+            <p>phone no</p>
+            <input type="text" class="input" id="phone" name="phone">
+        </div>
+        <div class="values">
+            <p>Whatsapp no</p>
+            <input type="text" class="input" id="wphone" name="wphone">
+        </div>
+        <div class="values">
+            <p>looking for</p>
+            <select name="lookingfor" id="lookingfor" >
+                <option value="sell">SELL</option>
+                <option value="rent">RENT</option>
+                <option value="pg">PG / Co-living</option>
+            </select>
+        </div>
+        <div class="values">
+            <p>Flat / Apartment</p>
+            <input type="text" class="input" name="flat" id="flat">
+        </div>
+        <div class="values">
+            <p>Address</p>
+            <input type="text" class="input" name="Address" id="Address">
+        </div>
+        <div class="values">
+            <p>Flat size</p>
+            <input type="text" id="flatsize" name="flatsize" placeholder="Enter area in square feet" class="input">
+        </div>
+        <div class="submit">
+            <button name="button" class="button login__submit"  value="postproperty" type="submit" id="postproperty">Post</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>

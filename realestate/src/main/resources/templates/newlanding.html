@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realestate Dashboard</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="/landing page.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <style>
+        *{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background: black;
+    font-family: poppins;
+}
+.Navigation{
+    border-bottom: 1px solid yellow;
+    padding-bottom: 10px;
+}
+.Navigation h2{
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+/* .Navigation ul{
+    align-items: right;
+    justify-content: right;
+    display: flex;
+    font-size: 14px;
+    margin-top: -40px;
+}
+.Navigation a{
+    color: white;
+    background-color: black;
+    padding: 6px;
+    text-decoration: none;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    margin: 10px;
+}
+.Navigation ul a:hover{
+    background-color: green;
+    color: white;
+} */
+.container {
+    display: flex;
+    font-size: 14px;
+    background: none;
+    color: white;
+    justify-content: right;
+
+}
+.navbar h3{
+    margin-left: 10px;
+}
+.navbar {
+    margin-top: -70px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link, .drop-down li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.drop-down {
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background: white;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;
+}
+
+.nav-link:hover {
+    background-color: yellow;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+.services-1:hover .drop-down {
+    display: block;
+    width: 400px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 2;
+}
+.services-2:hover .drop-down {
+    display: block;
+    width: 400px;
+    margin-top: 20px;
+    z-index: 1;
+}
+.services-3:hover .drop-down {
+    display: block;
+    width: 400px;
+    float: left;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.services a {
+    display: flex;
+    align-items: center;
+}
+
+.services .dropdown-icon {
+    font-size: 18px;
+    position: relative;
+    right: -5px;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out all;
+}
+
+.services:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.drop-down li:hover {
+    background: black;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.background{
+    width: 100%;
+    /* position: absolute; */
+    transform: translateX(-900%,-900%,-900%);
+    overflow: hidden;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 60s infinite;
+}
+.wrapper img{
+    width: 100%;
+    height: 400px;
+    opacity: 0.5;
+}
+/* @keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-25%);
+    }
+    20%{
+        transform: translateX(-50%);
+    }
+    30%{
+        transform: translateX(-75%);
+    }
+    40%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-125%);
+    }
+    60%{
+        transform: translateX(-150%);
+    }
+    70%{
+        transform: translateX(-200%)
+    }
+    80%{
+        transform: translateX(-250%);
+    }
+    90%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-350%);
+    }
+} */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-25%);
+        transition-timing-function: ease-in-out;
+    }
+    20% {
+        transform: translateX(-50%);
+        transition-timing-function: ease-in-out;
+    }
+    30% {
+        transform: translateX(-75%);
+        transition-timing-function: ease-in-out;
+    }
+    40% {
+        transform: translateX(-100%);
+        transition-timing-function: ease-in-out;
+    }
+    50% {
+        transform: translateX(-125%);
+        transition-timing-function: ease-in-out;
+    }
+    60% {
+        transform: translateX(-150%);
+        transition-timing-function: ease-in-out;
+    }
+    70% {
+        transform: translateX(-200%);
+        transition-timing-function: ease-in-out;
+    }
+    80% {
+        transform: translateX(-250%);
+        transition-timing-function: ease-in-out;
+    }
+    90% {
+        transform: translateX(-300%);
+        transition-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translateX(-350%);
+        transition-timing-function: ease-in-out;
+    }
+}
+marquee{
+    color: white;
+    position: relative;
+    top: -70px;
+}
+.main{
+    width: 75%;
+    height: 75px;
+    margin: auto;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    border-top: 3px solid blue;
+    margin-top: -70px;
+    position: relative;
+}
+.main .option-bar ul{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+.main .option-bar ul li a{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.main-cnt h2{
+    margin-left: 15%;
+    padding: 10px;
+}
+.re{
+    margin-top: 50px;
+}
+.content{
+    display: flex;
+    background-color: rgb(207, 205, 205);
+    width: 500px;
+    border: 1.5px solid gray;
+    position: absolute;
+    border-radius: 25px;
+    margin-top: -380px;
+    margin-left: 27%;
+    opacity: 0.8;
+}
+.content .search{
+}
+.search .btn{
+    padding: 10px;
+    border: none;
+    background-color: rgb(207, 205, 205);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.content .search input{
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgb(207, 205, 205);
+    outline: none;
+
+}
+.search .sbtn{
+    justify-content: right;
+    width: 150px;
+    background-color: rgb(207, 205, 205);
+    color: white;
+    font-size: 20px;
+    border: none;
+    color: blue;
+    font-family: poppins;
+    padding: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.main-cnt{
+    background-color: #d9d6d6;
+    width: 100%;
+    height: 500px;
+    height: max-content;
+    padding-top:20px;
+    overflow: hidden;
+}
+.buy .image{
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.image:hover{
+    scale: 1.02;
+}
+.t:hover{
+    color: red;
+}
+.u:hover{
+    color: blue;
+}
+.b{
+    background-color: #9e9e9e;
+    width: 80%;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.b:hover{
+    background-color: #7c9ee8;
+    border: 2px solid gray;
+}
+.r{
+    background-color: #9e9e9e;
+    width: 80%;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.r:hover{
+    background-color: #7c9ee8;
+    border: 2px solid gray;
+}
+.n{
+    background-color: #9e9e9e;
+    width: 80%;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.n:hover{
+    background-color: palevioletred;
+    border: 2px solid rgb(65, 65, 150);
+}
+.buy{
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+.buy .word{
+    margin: auto;
+    text-align: center;
+}
+.rent{
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    top: 0px;
+}
+.rent .word{
+    margin: auto;
+    text-align: center;
+}
+.rent .image{
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.dropdown-buyers{
+    width: 400px;
+    height: max-content;
+    background-color: lightgrey;
+    display: inline-block;
+    position: relative;
+}
+.dpdbuymain{
+    width: 200px;
+}
+.dpbuycontent{
+    padding: 10px;
+    display: non;
+    position: absolute;
+    z-index: 1;
+}
+.dpbuycontent button{
+    padding: 10px;
+    width: 100%;
+    background-color: gainsboro;
+    outline: none;
+    border: none;
+}
+.drop-buy:hover .dropdown-buyers{
+    display: block;
+}
+.in{
+    background-color: #d9d6d6;
+    padding-bottom: 50px;
+}
+.insightool h2{
+    font-weight: 600;
+    font-family: poppins;
+    padding-left: 20px;
+    margin-left: 200px;
+    padding-top: 50px;
+}
+.insightool p{
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: poppins;
+    margin-left: 220px;
+}
+.insight{
+    border: 2px solid gray;
+    width: 80%;
+    height: 300px;
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: #9e9e9e;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.insight:hover{
+    background-color: #7c9ee8;
+    border: 2px solid gray;
+}
+.boxes{
+    display: flex;
+    padding: 50px;
+    margin: auto;
+    gap: 10px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid grey;
+    border-radius: 8px;
+    margin: auto;
+    background-size: 100% 200%;
+    transition: background 0.5s;
+    background-color: #fff;
+}
+.box:hover{
+    color: black;
+    border: none;
+    background-image: linear-gradient(#a37cf0,white);
+    background-position: 100% 100%;
+}
+.box h3{
+    text-align: center;
+}
+.box .icons img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.box p{
+    position: absolute;
+    width: 150px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.data1{
+    background-color: #d9d6d6;
+    height: 500px;
+}
+.data1 p{
+    color: black;
+    font-size: 30px;
+    font-weight: 1000;
+    padding: 20px;
+    margin-left: 200px;
+}
+.dataimg1 img{
+    width: 500px;
+    border-radius: 15px;
+    margin-left: 200px;
+}
+.dataimg1 img:hover{
+    scale: 1.04;
+}
+.article{
+    display: flex;
+}
+.data1 h4{
+    margin-left: 50px;
+}
+.data1 h2{
+    margin-left: 50px;
+    padding-top: 20px;
+}
+.propbtn{
+    width: 250px;
+    padding: 15px;
+    color: white;
+    background-color: #7c9ee8;
+    background-size: 100% 200%;
+    transition: background 0.5s;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-left: 150px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.propbtn:hover{
+    background-color: rgb(44, 44, 228);
+}
+.h4{
+    padding-top: 10px;
+}
+.data1 h3{
+    margin-left: 50px;
+    padding-top: 10px;
+}
+.end{
+    color: white;
+}
+.end h3{
+    font-weight: 200;
+    margin: auto;
+    text-align: center;
+}
+.ourdata{
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.icons .icon{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 10px;
+    margin-top: 80px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #333;
+    text-decoration: none;
+}
+.icons .tooltip {
+    position: absolute;
+    top: 0;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.icons .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.icons .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.icons .icon:hover span,
+.icons .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.icons .whatsapp:hover,
+.icons .whatsapp:hover .tooltip,
+.icons .whatsapp:hover .tooltip::before {
+    background-color: green;
+    color: #ffffff;
+}
+.icons .facebook:hover,
+.icons .facebook:hover .tooltip,
+.icons .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+.icons .linkedin:hover,
+.icons .linkedin:hover .tooltip,
+.icons .linkedin:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+.icons .instagram:hover,
+.icons .instagram:hover .tooltip,
+.icons .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+}
+.floatbtn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+.floatbtn button{
+    padding: 6px;
+    background-color: #007bff;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-size: 100% 200%;
+    transition: background 0.5s;
+    padding: 14px 24px;
+    border-radius: 10px;
+}
+.floatbtn button:hover{
+    background-color: orangered;
+}
+.theend{
+    padding-bottom: 150px;
+}
+    </style>
+</head>
+<body >
+<section class="Navigation">
+    <h2>RealE$tate Listing Management</h2>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link services-1">
+                    <a href="#">For Owners
+                        <span class="material-icons dropdown-icon">
+                                    arrow_drop_down
+                                </span>
+                    </a>
+                    <ul class="drop-down">
+                        <h3>TOP CITIES</h3>
+                        <li>Property in Coimbatoer</li>
+                        <li>Property in karur</li>
+                        <li>Property in Erode</li>
+                        <li>Property in Erode</li>
+                        <li>Property in Salem</li>
+                    </ul>
+                </li>
+                <li class="nav-link services-2">
+                    <a href="#">For Owners
+                        <span class="material-icons dropdown-icon">
+                                    arrow_drop_down
+                                </span>
+                    </a>
+                    <ul class="drop-down">
+                        <h3>TOP CITIES</h3>
+                        <li>Property in Coimbatoer</li>
+                        <li>Property in karur</li>
+                        <li>Property in Erode</li>
+                        <li>Property in Erode</li>
+                        <li>Property in Salem</li>
+                    </ul>
+                </li>
+                <li class="nav-link services-3">
+                    <a href="#">For Owners
+                        <span class="material-icons dropdown-icon">
+                                    arrow_drop_down
+                                </span>
+                    </a>
+                    <ul class="drop-down">
+                        <h3>TOP CITIES</h3>
+                        <li>Property in Coimbatoer</li>
+                        <li>Property in karur</li>
+                        <li>Property in Erode</li>
+                        <li>Property in Erode</li>
+                        <li>Property in Salem</li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="#" >Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section class="background">
+    <div class="wrapper">
+        <img src="/bglogin.webp">
+        <img src="/img1.jpg" >
+        <img src="/img6.jpg" >
+        <img src="/img3.jpg" >
+        <img src="/img4.jpg" >
+        <img src="/img5.jpg" >
+        <img src="/bhone.webp">
+        <img src="/buy-plot.jpg">
+        <img src="/buy-pt.webp">
+        <img src="/buy-villa.jpg">
+    </div>
+</section>
+<section>
+    <a href="/profile"><div class="floatbtn">
+        <button>Carts & Orders</button>
+    </div></a>
+</section>
+<section>
+    <div class="content">
+        <div class="search">
+            <button class="btn">
+                All Residential
+            </button>
+            <input type="text" name="Search.." id="Search" placeholder="Search..">
+            <button class="sbtn">Search</button>
+        </div>
+    </div>
+</section>
+<marquee behavior="" direction="left">Institutional investments in real estate touch $1.0 billion in Q1 2024.      Sobha Ltd gets ₹46 crore income tax demand notices; company to file appeal.     Green mortgages set to take off as US makes homes fit for future.     Railways may lease out land to real estate developers in Mumbai and Bengaluru.
+</marquee>
+<section class="main">
+    <div class="option-bar">
+        <ul type="none">
+            <li  onclick="buy()" id="buybtn"><a href="">Buy</a></li>
+            <li><a href="" onclick="rent()" id="rentbtn">Rent</a></li>
+            <li><a href="">New Launch</a></li>
+            <li><a href="">PG / Co-living</a></li>
+            <li><a href="">Plots / Projects</a></li>
+        </ul>
+    </div>
+</section>
+<section class="main-cnt">
+    <h2>Buy...</h2>
+    <div class="b">
+        <div class="buy" id="buys">
+            <div class="t" >
+                <a href="/buyhomes"><input  class="image" type="image" src="/bhone.webp" name="submit" onclick="window.location.href = 'buy homes.html';">
+                    <h3 class="word" >Buying Home</h3></a>
+            </div>
+            <div class="t">
+                <a href="/buyvillas"><input class="image"  type="image" src="/buy-villa.jpg" name="submit" onclick="window.location.href = 'buy villas.html';">
+                    <h3 class="word">Buying villa</h3></a>
+            </div>
+            <div class="t">
+                <a href="/buyplots"><input class="image" type="image" src="/buy-plot.jpg">
+                    <h3 class="word">Buying plots</h3></a>
+            </div>
+            <div class="t">
+                <a href="/Buy"><input class="image" type="image" src="/buy-pt.webp">
+                    <h3 class="word">Buy</h3></a>
+            </div>
+        </div>
+    </div>
+    <h2 class="re">Rents...</h2>
+    <div class="r">
+        <div class="rent" id="rents">
+            <div class="t">
+                <a href="renthomes"><input class="image" type="image" src="/bhone.webp">
+                    <h3 class="word">Renting Home</h3></a>
+            </div>
+            <div class="t">
+                <a href="rentvillas"><input class="image" type="image" src="/buy-villa.jpg" name="submit" onclick="window.location.href = 'login.html';">
+                    <h3 class="word">Renting villa</h3></a>
+            </div>
+            <div class="t">
+                <a href="rentplots"><input class="image" type="image" src="/buy-plot.jpg">
+                    <h3 class="word">Renting plots</h3></a>
+            </div>
+            <div class="t">
+                <a href="rent"><input class="image" type="image" src="/buy-pt.webp">
+                    <h3 class="word">Rent</h3></a>
+            </div>
+        </div>
+    </div>
+    <h2 class="re">Paying Guest or Co-Living options</h2>
+    <div class="r">
+        <div class="rent" id="launch">
+            <div class="t">
+                <input class="image" type="image" src="/bhone.webp">
+                <h3 class="word">Home</h3>
+            </div>
+            <div class="t">
+                <input class="image" type="image" src="/buy-villa.jpg" name="submit" onclick="window.location.href = 'login.html';">
+                <h3 class="word">villa</h3>
+            </div>
+            <div class="t">
+                <input class="image" type="image" src="/buy-plot.jpg">
+                <h3 class="word">plots</h3>
+            </div>
+            <div class="t">
+                <input class="image" type="image" src="/buy-pt.webp">
+                <h3 class="word">co-living</h3>
+            </div>
+        </div>
+        </div>
+    <h2 class="re">New Upcomming...</h2>
+    <div class="n">
+        <div class="rent" id="upcoming">
+            <div class="u">
+                <input value="launch1" class="image" type="image" src="/launch0.jpg">
+                <h3 class="word">Mordern Home</h3>
+            </div>
+            <div class="u">
+                <input class="image" type="image" src="/launch1.jpg" name="submit" onclick="window.location.href = 'login.html';">
+                <h3 class="word">Renting villa</h3>
+            </div>
+            <div class="u">
+                <input class="image" type="image" src="/launch2.jpg">
+                <h3 class="word">Renting plots</h3>
+            </div>
+            <div class="u">
+                <input class="image" type="image" src="/launch3.jpg">
+                <h3 class="word">Rent</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="in">
+    <div class="cont">
+        <div class="insightool">
+            <h2>Insights & Tools</h2>
+            <p>Go from browsing to buying</p>
+        </div>
+        <div class="insight">
+            <div class="boxes">
+                <div class="box">
+                    <div class="icons"><img src="/locality.webp" alt=""></div><h3>Locality Insights</h3><p>Know more about different locality</p></div>
+                <a href="emiloan"><div class="box"><div class="icons"><img src="/calculator.jpg" alt=""></div><h3>Calculator</h3><p>Check your affordability range for buying home</p></div></a>
+                <div class="box"><div class="icons"><img src="/aboutproperty.jpg" alt=""></div><h3>About My Property</h3><p>Check property values</p></div>
+                <div class="box"><div class="icons"><img src="/tpimg.png" alt=""></div><h3>Transaction Prices</h3><p>Track prices & analyse market Trends and demands</p></div>
+                <div class="box"><div class="icons"><img src="/loan.png" alt=""></div><h3>Loan Eligiblity</h3><p>See what you can borrow for your home</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="data1">
+    <p>Sell or Rent your Property on owr Web</p>
+    <div class="article">
+        <div class="dataimg1"><img src="/postbr.webp" alt=""></div>
+        <div class="article1">
+            <h4>Post your Property(Commercial / Residential)</h4>
+            <h2>Register to post your Property For sell or rent</h2>
+            <h4 class="h4" >Trust Our website and our employee to secure your datas and connections ></h4>
+            <h3>Trust is essential. Without it, social groups can't function properly.</h3>
+            <a href="/propertyform"><button class="propbtn" value="propertybtn" type="submit">Post your property</button></a>
+        </div>
+    </div>
+</section>
+<section class="end">
+    <div class="ourdata">
+        <h3>©RealE$tateListing. All Rights Reserved. Siva groups</h3>
+        <h3>All trademarks are the property of their respective owner - Siva.</h3>
+    </div>
+    <div class="ourdata">
+        <ul>
+            <li>Team Lead : Sivasakthi P</li>
+            <li>Co-Founders :</li>
+            <li>Yeshwanth S</li>
+            <li>Roshan K</li>
+            <br>
+            <br>
+            <li>Conatct Us</li>
+            <li>Email - 717822F254@kce.ac.in</li>
+            <li>Connect With Us</li>
+            <div class="icons">
+                <a href="#" class="icon whatsapp">
+                    <div class="tooltip">Whatsapp</div>
+                    <span><i class="fab fab fab fa-whatsapp"></i></span>
+                </a>
+                <a href="#" class="icon linkedin">
+                    <div class="tooltip">linkedin</div>
+                    <span><i class="fab fab fa-linkedin-in"></i></span>
+                </a>
+                <a href="#" class="icon instagram">
+                    <div class="tooltip">Instagram</div>
+                    <span><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="#" class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+            </div>
+            <li></li>
+            <br>
+            <br>
+            <div class="theend"></div>
+        </ul>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordern Registration</title>
+    <style>
+        .content{
+            width: 600px;
+            height: max-content;
+            border: 2px solid blue;
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+        }
+        .right-side{
+            margin-left: 10px;
+        }
+        .scontent {
+            display: flex;
+        }
+        .mcontent select{
+            width: 100px;
+            padding: 5px;
+            font-size: 18px;
+            border: none;
+            background-color: blue;
+            border-radius: 10px;
+            margin-left: 10px;
+            padding-left: 10px;
+            color: white;
+            outline: none;
+        }
+        .bcontent button{
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 2px solid orangered;
+            background-size: 100% 200%;
+            transition: 0.5s;
+        }
+        .bcontent button:hover{
+            background-color: orangered;
+            color: white;
+        }
+        .scontent{
+            border: 2px solid red;
+            border-radius: 10px;
+            width: max-content;
+            padding-left: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .hh{
+            text-align: center;
+            font-weight: 600;
+        }
+        .content img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="content">
+        <div >
+            
+            <h2 class="hh">Confirmation Details</h2>
+            <img src="/img r1 - Copy.jpg" alt="" width="400px" height="300px">
+            <div class="right-side">
+                <h2>Property 2</h2>
+                <p>3BHK house</p>
+                <ul>
+                    <li>Owner Details</li>
+                    <li>Name : siva</li>
+                    <li>email: 00001@gmail.com</li>
+                    <li>Ph no: 123456789</li>
+                </ul>
+                <p>Flat no : 223</p>
+                <p>Flat size: 1500 sq.feet</p>
+                <h3>Address</h3>
+                <li type="none">karpagam colony</li>
+                <li type="none">coimbatore - 6380000</li>
+                <li type="none"></li>
+                <div class="amount1">
+                    <p>Amount : 600000</p>
+                </div>
+                </div>
+            <form action="payment" method="post"><div class="mcontent">
+                    <h2>For buying pay the advance amount to book of Rs.1000</h2>
+                    <div class="scontent">
+                    <p name="amount" id="amount">Rs.1000</p><select name="option" id="option">
+                        <option value="UPI">UPI
+                        </option>
+                        <option value="Card">Card</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                    </select>
+                </div>
+                </div>
+                <div class="bcontent">
+                    <a href="pay"><button value="pay" id="pay" name="pay" >Pay & confirm</button></a>
+                </div></form>
+        </div>
+    </section>
+</body>
+</html>

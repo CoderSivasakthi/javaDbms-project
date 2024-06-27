@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Buying page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .main-container{
+        width: 800px;
+        background-color: blue;
+        margin: auto;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="main-container">
+<div class="container">
+    <h1>Real Estate Buying Platform</h1>
+    <form action="ownerdata" method="post">
+        <label for="propertyType">Property Type:</label>
+        <select id="propertyType" name="propertyType">
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+            <option value="land">Land</option>
+        </select>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" >
+        
+        <label for="size">Size/Area (sq ft):</label>
+        <input type="number" id="size" name="size" >
+        
+        <label for="Flatno">Flat no:</label>
+        <input type="number" id="Flatno" name="Flatno" >
+
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" >
+        
+        <label for="bathrooms">Number of Bathrooms:</label>
+        <input type="number" id="bathrooms" name="bathrooms" >
+        
+        <label for="yearBuilt">Year Built:</label>
+        <input type="date" id="yearBuilt" name="yearBuilt" >
+        
+        <label for="salePrice">Sale Price ($):</label>
+        <input type="number" id="salePrice" name="salePrice" >
+        
+        <label for="downPayment">Down Payment ($):</label>
+        <input type="number" id="downPayment" name="downPayment" >
+        
+        
+        
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</div>
+</body>
+</html>
